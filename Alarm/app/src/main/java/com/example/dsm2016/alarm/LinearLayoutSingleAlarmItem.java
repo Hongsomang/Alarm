@@ -17,13 +17,18 @@ public class LinearLayoutSingleAlarmItem extends LinearLayout {
     TextView textView;
     Button AlarmItemCancel;
     AlarmData alarmData;
+
     private int position;
+
     public  LinearLayoutSingleAlarmItem(Context context){
         super(context);
         mContext=context;
+
         LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout=inflater.inflate(R.layout.single_alarm_data_layout,this);
+
         textView=(TextView)layout.findViewById(R.id.textViewTime);
+
         AlarmItemCancel=(Button)findViewById(R.id.AlarmItemCancel);
         AlarmItemCancel.setOnClickListener(new OnClickListener() {
             @Override
@@ -39,6 +44,7 @@ public class LinearLayoutSingleAlarmItem extends LinearLayout {
 
     }
     OnRemoveButtonOnClickListner onRemoveButtonOnClickListner;
+
     void  setOnRemoveButtonOnClickListner(OnRemoveButtonOnClickListner onRemoveButtonOnClickListner){
         this.onRemoveButtonOnClickListner=onRemoveButtonOnClickListner;
 
@@ -46,6 +52,7 @@ public class LinearLayoutSingleAlarmItem extends LinearLayout {
     public boolean setData(AlarmData alarmData,int position){
         this.alarmData=alarmData;
         this.position=position;
+
         textView.setText(alarmData.hh+":"+alarmData.mm+"and requestCode:"+alarmData.reqCode);
 
     return true;

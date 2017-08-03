@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("메인","입니다");
         setContentView(R.layout.main_activity);
         ImageButton plus=(ImageButton)findViewById(R.id.plusbtn);
         plus.setOnClickListener(plusonClick);
@@ -32,6 +31,7 @@ public class MainActivity extends AppCompatActivity  {
         stopwatch.setOnClickListener(stopwatchonClick);
         timer=(Button)findViewById(R.id.timerbtn);
         timer.setOnClickListener(timeronClick);
+        Log.d("메인","입니다");
     }
     View.OnClickListener timeronClick=new View.OnClickListener() {
         @Override

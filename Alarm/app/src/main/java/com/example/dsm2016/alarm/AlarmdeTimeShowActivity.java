@@ -18,11 +18,13 @@ public class AlarmdeTimeShowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alarmed_time_show_layout);
         AlarmedTime=(TextView)findViewById(R.id.textViewAlarmedTime);
+
         Intent intent=getIntent();
-        String tiem=intent.getStringExtra("time");
+        String time=intent.getStringExtra("time");
         String data=intent.getStringExtra("data");
         int reqCode=intent.getIntExtra("reCode",0);
-        AlarmedTime.setText(tiem+"\n"+data+"\n"+reqCode);
+
+        AlarmedTime.setText(time+"\n"+data+"\n"+reqCode);
         Log.d("AlarmdeTimeShowActivity","입니다.");
     }
 }

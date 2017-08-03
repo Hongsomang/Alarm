@@ -22,7 +22,8 @@ public class AdapterAlarm extends BaseAdapter {
     ArrayList<String> mData;
     LayoutInflater mIflate;
     ArrayList<AlarmData> alarmDataArrayList;
-    public AdapterAlarm(Context context,ArrayList<AlarmData>alarmDataArrayList){
+
+    public AdapterAlarm(Context context,ArrayList<AlarmData> alarmDataArrayList){
         mcontext=context;
         this.alarmDataArrayList=alarmDataArrayList;
         mIflate=LayoutInflater.from(mcontext);
@@ -53,11 +54,13 @@ public class AdapterAlarm extends BaseAdapter {
     public View getView(int position, View view, ViewGroup parent) {
         LinearLayoutSingleAlarmItem layoutSingleAlarmItem=(LinearLayoutSingleAlarmItem) view;
         if(layoutSingleAlarmItem==null){
+
             layoutSingleAlarmItem=new LinearLayoutSingleAlarmItem(mcontext);
             layoutSingleAlarmItem.setOnRemoveButtonOnClickListner(onRemoveButtonOnClickListner);
+
         }
         layoutSingleAlarmItem.setData(alarmDataArrayList.get(position),position);
-
+        Log.d("getView","입니다.");
         return layoutSingleAlarmItem;
     }
     LinearLayoutSingleAlarmItem.OnRemoveButtonOnClickListner onRemoveButtonOnClickListner=new LinearLayoutSingleAlarmItem.OnRemoveButtonOnClickListner() {
@@ -65,10 +68,15 @@ public class AdapterAlarm extends BaseAdapter {
         public void onClicked(int hh, int mm, int reqCode, int position) {
             //Toast.makeText(mcontext,"position:"+position+"reqCode:"+reqCode, 0).show();
             Toast.makeText(mcontext,"position:"+position+"reqCode"+reqCode, Toast.LENGTH_LONG).show();
+
             AlarmManager alarmManager=(AlarmManager)mcontext.getSystemService(Context.ALARM_SERVICE);
+
             Intent intent=new Intent(mcontext,AlarmdeTimeShowActivity.class);
+
             Toast.makeText(mcontext,"reqCode:"+reqCode,Toast.LENGTH_LONG).show();
+
             PendingIntent pi=PendingIntent.getActivity(mcontext,reqCode,intent,PendingIntent.FLAG_CANCEL_CURRENT);
+
             alarmManager.cancel(pi);
             removeData(position);
             Log.d("Remove","입니다");

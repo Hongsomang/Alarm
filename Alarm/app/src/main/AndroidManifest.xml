@@ -18,6 +18,7 @@
         <activity android:name=".AlarmActivity"></activity>
         <activity android:name=".StopwatchActivity"></activity>
         <activity android:name=".TimerActivity"></activity>
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>

@@ -66,18 +66,22 @@ public class StopwatchActivity extends AppCompatActivity {
     }
     public void print(View view){
         list=(TextView)findViewById(R.id.watchlist);
+
         long current=SystemClock.elapsedRealtime()-chron.getBase();
         int time=(int)(current/1000);
         int hour=time/(60*60);
         int min=time%(60*60)/60;
         int sec=time%60;
+
         list.setText(hour+":"+min+":"+sec+"\n");
 
     }
     public  void reset(View view){
         list=(TextView)findViewById(R.id.watchlist);
+
         chron.stop();
         chron.setBase(SystemClock.elapsedRealtime());
+
         list.setText("");
 
     }
