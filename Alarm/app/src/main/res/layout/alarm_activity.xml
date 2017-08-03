@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#6D76D1">
+
+        <RelativeLayout
+            android:id="@+id/alarmlayout"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/clock" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/alarmlayout"
+            android:text="알람 설정"
+            android:textColor="#FFFF"
+            android:gravity="center_vertical"
+            android:textSize="40dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/contentlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFF">
+
+           <TimePicker
+               android:id="@+id/time_picker"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"></TimePicker>
+            <TextView
+                android:layout_below="@+id/time_picker"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            >
+            <RelativeLayout
+                android:id="@+id/bottomlayout1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+
+                android:layout_width="200dp"
+                android:layout_height="60dp">
+                <Button
+                    android:id="@+id/cancelbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="취소"
+                    android:textSize="30dp"
+                    android:textColor="#95989A"
+                    android:background="@drawable/shape"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+
+                    android:scaleType="centerInside"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/save"
+                android:layout_toRightOf="@+id/bottomlayout1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <Button
+                    android:id="@+id/savebtn"
+                    android:scaleType="centerInside"
+                    android:layout_width="match_parent"
+                    android:textSize="30dp"
+                    android:text="저장"
+                    android:textColor="#95989A"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

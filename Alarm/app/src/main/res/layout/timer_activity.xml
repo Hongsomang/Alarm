@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#6D76D1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/toplayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/toplayout2">
+
+            <Button
+                android:id="@+id/StopWatchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/stopwatchimg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/stopwatch" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/stopwatchimg"
+                android:gravity="center_horizontal"
+                android:text="stopwatch"
+                android:textColor="#FFFF"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/toplayout2"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/timerimg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/timer" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/timerimg"
+                android:gravity="center_horizontal"
+                android:text="timer"
+                android:textColor="#FFFF"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/toplayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/toplayout2"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/alarmbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+
+            <ImageView
+                android:id="@+id/alarmimg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/alarm" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/alarmimg"
+                android:gravity="center_horizontal"
+                android:text="Alarm"
+                android:textColor="#FFFF"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFF">
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:layout_below="@+id/chronometer"
+            android:id="@+id/startbtn"
+            android:background="@drawable/shape"
+            android:text="시작"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_below="@+id/startbtn"
+            android:id="@+id/Layout"
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+        </RelativeLayout>
+        <Button
+            android:id="@+id/stopbtn"
+            android:background="@drawable/shape"
+            android:layout_below="@+id/Layout"
+            android:text="정지"
+            android:textSize="30dp"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_below="@+id/stopbtn"
+            android:id="@+id/Layout2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+        </RelativeLayout>
+        <Button
+            android:layout_below="@+id/Layout2"
+            android:text="초기화"
+            android:textColor="#000"
+            android:textSize="30dp"
+            android:background="@drawable/shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>
