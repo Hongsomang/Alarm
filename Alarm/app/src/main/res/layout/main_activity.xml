@@ -2,102 +2,109 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="#6D76D1">
+        android:background="#6D76D1"
+        android:orientation="horizontal">
+
         <RelativeLayout
             android:id="@+id/toplayout1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:layout_toRightOf="@+id/toplayout2"
-            >
+            android:layout_toRightOf="@+id/toplayout2">
+
             <Button
                 android:id="@+id/StopWatchBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null"/>
+                android:background="@null" />
+
             <ImageView
                 android:id="@+id/stopwatchimg"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/stopwatch"
+                android:layout_centerHorizontal="true"
                 android:background="@android:color/transparent"
                 android:scaleType="centerInside"
-                android:layout_centerHorizontal="true"
-                />
+                android:src="@drawable/stopwatch" />
+
             <TextView
-                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/stopwatchimg"
-                android:textColor="#FFFF"
+                android:gravity="center_horizontal"
                 android:text="stopwatch"
-                android:textSize="20dp"/>
+                android:textColor="#FFFF"
+                android:textSize="20dp" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/toplayout2"
             android:layout_width="130dp"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            >
+            android:layout_centerHorizontal="true">
+
             <Button
-                android:id="@+id/timer"
+                android:id="@+id/timerbtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null"/>
+                android:background="@null" />
+
             <ImageView
                 android:id="@+id/timerimg"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/timer"
+                android:layout_centerHorizontal="true"
                 android:background="@android:color/transparent"
                 android:scaleType="centerInside"
-                android:layout_centerHorizontal="true"
-                />
+                android:src="@drawable/timer" />
+
             <TextView
-                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/timerimg"
-                android:textColor="#FFFF"
+                android:gravity="center_horizontal"
                 android:text="timer"
-                android:textSize="20dp"/>
+                android:textColor="#FFFF"
+                android:textSize="20dp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:orientation="vertical"
             android:id="@+id/toplayout3"
-            android:layout_toLeftOf="@+id/toplayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            >
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/toplayout2"
+            android:orientation="vertical">
+
             <Button
                 android:id="@+id/alarmbtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@null"/>
+                android:background="@null" />
+
             <ImageView
                 android:id="@+id/alarmimg"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/alarm"
+                android:layout_centerHorizontal="true"
                 android:background="@android:color/transparent"
                 android:scaleType="centerInside"
-                android:layout_centerHorizontal="true"
-                />
+                android:src="@drawable/alarm" />
+
             <TextView
-                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/alarmimg"
-                android:textColor="#FFFF"
+                android:gravity="center_horizontal"
                 android:text="Alarm"
-                android:textSize="20dp"/>
+                android:textColor="#FFFF"
+                android:textSize="20dp" />
 
 
         </RelativeLayout>

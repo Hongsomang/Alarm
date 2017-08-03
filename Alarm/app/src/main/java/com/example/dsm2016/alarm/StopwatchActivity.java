@@ -1,5 +1,6 @@
 package com.example.dsm2016.alarm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
@@ -16,12 +17,17 @@ import android.widget.TextView;
 public class StopwatchActivity extends AppCompatActivity {
     TextView list;
     Chronometer chron;
+    Button Alarm,Timer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stopwatch_activity);
         chron=(Chronometer)findViewById(R.id.stopwatch);
+        Alarm=(Button)findViewById(R.id.alarmbtn);
+        Alarm.setOnClickListener(AlarmonClick);
+        Timer=(Button)findViewById(R.id.timer);
+        Timer.setOnClickListener(TimeronClick);
         /*chron.setBase(SystemClock.elapsedRealtime());
        /* chron.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
             @Override
@@ -32,6 +38,23 @@ public class StopwatchActivity extends AppCompatActivity {
         });*/
 
     }
+    View.OnClickListener TimeronClick=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent=new Intent(getApplicationContext(),TimerActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
+    View.OnClickListener AlarmonClick=new View.OnClickListener(){
+
+        @Override
+        public void onClick(View view) {
+            Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
     public void start(View view){
         chron.start();
 

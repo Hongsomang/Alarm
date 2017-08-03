@@ -18,7 +18,7 @@ import android.widget.TimePicker;
 public class MainActivity extends AppCompatActivity  {
     AdapterAlarm adapterAlarm;
     ListView alarmlistview;
-    Button stopwatch;
+    Button stopwatch,timer;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +30,23 @@ public class MainActivity extends AppCompatActivity  {
         alarmlistview.setAdapter(adapterAlarm);
         stopwatch=(Button)findViewById(R.id.StopWatchBtn);
         stopwatch.setOnClickListener(stopwatchonClick);
+        timer=(Button)findViewById(R.id.timerbtn);
+        timer.setOnClickListener(timeronClick);
     }
+    View.OnClickListener timeronClick=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent=new Intent(getApplicationContext(),TimerActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
     View.OnClickListener stopwatchonClick=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Intent intent=new Intent(getApplicationContext(),StopwatchActivity.class);
             startActivity(intent);
+            finish();
         }
     };
     View.OnClickListener plusonClick=new View.OnClickListener() {

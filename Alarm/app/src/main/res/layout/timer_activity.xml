@@ -111,53 +111,104 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFF">
-        <Chronometer
-            android:id="@+id/chronometer"
+
+        <EditText
+            android:id="@+id/timerEdit"
+            android:hint="시간을 입력하세요"
+            android:textColorHint="#95989A"
+            android:textColor="#000"
+            android:gravity="center"
+            android:ems="10"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/spendbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle"
+            android:text="세팅"
+            android:textColor="#000"
+            android:layout_alignBottom="@+id/timerEdit"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/timerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+           android:layout_below="@+id/timerEdit"
+
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/colorshape" />
+
+            <TextView
+                android:id="@+id/timerView"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:text="00:00:00"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layerType="hardware"
+                android:textSize="40dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/startbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"/>
-        <Button
-            android:layout_below="@+id/chronometer"
-            android:id="@+id/startbtn"
+            android:layout_below="@+id/timerlayout"
             android:background="@drawable/shape"
             android:text="시작"
-            android:textSize="30dp"
             android:textColor="#000"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="30dp" />
+
         <RelativeLayout
-            android:layout_below="@+id/startbtn"
             android:id="@+id/Layout"
             android:layout_width="match_parent"
-            android:layout_height="10dp">
-        </RelativeLayout>
+            android:layout_height="10dp"
+            android:layout_below="@+id/startbtn"></RelativeLayout>
+
         <Button
             android:id="@+id/stopbtn"
-            android:background="@drawable/shape"
-            android:layout_below="@+id/Layout"
-            android:text="정지"
-            android:textSize="30dp"
-            android:textColor="#000"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Layout"
+            android:background="@drawable/shape"
+            android:text="정지"
+            android:textColor="#000"
+            android:textSize="30dp" />
+
         <RelativeLayout
-            android:layout_below="@+id/stopbtn"
             android:id="@+id/Layout2"
             android:layout_width="match_parent"
-            android:layout_height="10dp">
-        </RelativeLayout>
+            android:layout_height="10dp"
+            android:layout_below="@+id/stopbtn"></RelativeLayout>
+
         <Button
+            android:id="@+id/resetbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/Layout2"
+            android:background="@drawable/shape"
             android:text="초기화"
             android:textColor="#000"
-            android:textSize="30dp"
-            android:background="@drawable/shape"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="30dp" />
     </RelativeLayout>
 
 </LinearLayout>
